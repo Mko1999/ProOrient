@@ -1,73 +1,73 @@
-// The six RIASEC (Holland) personality types and their descriptive content.
+// RIASEC-ի (Հոլանդ) վեց անհատականության տիպերը և դրանց նկարագրական բովանդակությունը։
 
 export const TYPES = {
   R: {
     key: "R",
-    name: "Realistic",
+    name: "Իրատեսական",
     color: "#e0653a",
-    desc: "Practical, hands-on, mechanical, technical, nature-oriented.",
-    fields: "Engineering, energy, IT support, agriculture",
-    traits: ["Practical & hands-on", "Mechanically inclined", "Prefers physical work", "Values concrete results"],
+    desc: "Գործնական, ձեռքի աշխատանք, մեխանիկական, տեխնիկական, բնությանն ուղղված։",
+    fields: "Ինժեներիա, էներգետիկա, ՏՏ աջակցություն, գյուղատնտեսություն",
+    traits: ["Գործնական և ձեռքի աշխատանք", "Մեխանիկական հակումներ", "Նախընտրում է ֆիզիկական աշխատանք", "Գնահատում է շոշափելի արդյունքներ"],
     strengths:
-      "Enjoys working with tools, machines, and physical materials, and solving tangible real-world problems rather than abstract ones.",
-    envs: "Workshops, laboratories, field sites, manufacturing, technical maintenance.",
+      "Հաճույք է ստանում գործիքների, մեքենաների և ֆիզիկական նյութերի հետ աշխատելուց ու վերացականի փոխարեն իրական, շոշափելի խնդիրներ լուծելուց։",
+    envs: "Արհեստանոցներ, լաբորատորիաներ, դաշտային աշխատանք, արտադրություն, տեխնիկական սպասարկում։",
   },
   I: {
     key: "I",
-    name: "Investigative",
+    name: "Հետազոտական",
     color: "#3aa6e0",
-    desc: "Analytical, scientific, curious, intellectual.",
-    fields: "Medicine, physics, programming, research",
-    traits: ["Analytical thinker", "Curious & intellectual", "Enjoys research", "Driven by understanding"],
+    desc: "Վերլուծական, գիտական, հետաքրքրասեր, ինտելեկտուալ։",
+    fields: "Բժշկություն, ֆիզիկա, ծրագրավորում, հետազոտություն",
+    traits: ["Վերլուծական մտածողություն", "Հետաքրքրասեր և ինտելեկտուալ", "Սիրում է հետազոտություն", "Առաջնորդվում է հասկանալու ձգտմամբ"],
     strengths:
-      "Thrives on observing, learning, investigating, and solving complex theoretical problems through logic and analysis.",
-    envs: "Research institutions, universities, R&D labs, software and data teams.",
+      "Ծաղկում է դիտարկելով, սովորելով, հետազոտելով և բարդ տեսական խնդիրները տրամաբանության ու վերլուծության միջոցով լուծելով։",
+    envs: "Հետազոտական հաստատություններ, համալսարաններ, R&D լաբորատորիաներ, ծրագրային և տվյալների թիմեր։",
   },
   A: {
     key: "A",
-    name: "Artistic",
+    name: "Արվեստագիտական",
     color: "#c75ce0",
-    desc: "Creative, free, expressive, original.",
-    fields: "Design, art, music, graphics",
-    traits: ["Creative & original", "Expressive", "Values freedom", "Imaginative"],
+    desc: "Ստեղծագործ, ազատ, արտահայտիչ, ինքնատիպ։",
+    fields: "Դիզայն, արվեստ, երաժշտություն, գրաֆիկա",
+    traits: ["Ստեղծագործ և ինքնատիպ", "Արտահայտիչ", "Գնահատում է ազատությունը", "Երևակայող"],
     strengths:
-      "Excels in unstructured settings where self-expression and original thinking are rewarded over fixed rules.",
-    envs: "Studios, agencies, media, design teams, performing arts.",
+      "Փայլում է ոչ կաղապարված միջավայրերում, որտեղ ինքնարտահայտումն ու ինքնատիպ մտածողությունը գնահատվում են ֆիքսված կանոններից ավելի։",
+    envs: "Ստուդիաներ, գործակալություններ, մեդիա, դիզայնի թիմեր, բեմական արվեստ։",
   },
   S: {
     key: "S",
-    name: "Social",
+    name: "Սոցիալական",
     color: "#42c08a",
-    desc: "Cooperative, helpful, communicative.",
-    fields: "Education, healthcare, counseling",
-    traits: ["Empathetic", "Cooperative", "Strong communicator", "People-oriented"],
+    desc: "Համագործակցող, օգնող, հաղորդակցական։",
+    fields: "Կրթություն, առողջապահություն, խորհրդատվություն",
+    traits: ["Կարեկցող", "Համագործակցող", "Հմուտ հաղորդակցող", "Մարդակենտրոն"],
     strengths:
-      "Finds meaning in helping, teaching, and supporting others, and builds strong interpersonal connections.",
-    envs: "Schools, hospitals, NGOs, counseling centers, HR departments.",
+      "Իմաստ է գտնում ուրիշներին օգնելու, սովորեցնելու և աջակցելու մեջ ու կառուցում է ամուր միջանձնային կապեր։",
+    envs: "Դպրոցներ, հիվանդանոցներ, ՀԿ-ներ, խորհրդատվական կենտրոններ, HR բաժիններ։",
   },
   E: {
     key: "E",
-    name: "Enterprising",
+    name: "Ձեռնարկատիրական",
     color: "#e8b04b",
-    desc: "Leadership, persuasion, sales, organizing.",
-    fields: "Marketing, law, management, business",
-    traits: ["Persuasive leader", "Ambitious", "Confident", "Goal-driven"],
+    desc: "Առաջնորդություն, համոզում, վաճառք, կազմակերպում։",
+    fields: "Մարքեթինգ, իրավունք, կառավարում, բիզնес",
+    traits: ["Համոզիչ առաջնորդ", "Հավակնոտ", "Ինքնավստահ", "Նպատակասլաց"],
     strengths:
-      "Enjoys leading, persuading, and taking initiative to reach ambitious goals, often in competitive settings.",
-    envs: "Startups, sales teams, management, law firms, marketing.",
+      "Հաճույք է ստանում առաջնորդելուց, համոզելուց և նախաձեռնություն ցուցաբերելուց՝ հավակնոտ նպատակների հասնելու համար, հաճախ մրցակցային միջավայրում։",
+    envs: "Ստարտափներ, վաճառքի թիմեր, կառավարում, իրավաբանական ընկերություններ, մարքեթինգ։",
   },
   C: {
     key: "C",
-    name: "Conventional",
+    name: "Կանոնակարգային",
     color: "#7d8bf0",
-    desc: "Organized, structured, methodical, precise.",
-    fields: "Accounting, administration, banking",
-    traits: ["Organized & precise", "Detail-oriented", "Methodical", "Reliable"],
+    desc: "Կազմակերպված, կառուցվածքային, մեթոդական, ճշգրիտ։",
+    fields: "Հաշվապահություն, վարչարարություն, բանկային գործ",
+    traits: ["Կազմակերպված և ճշգրիտ", "Մանրուքների ուշադիր", "Մեթոդական", "Հուսալի"],
     strengths:
-      "Performs best with clear procedures, accurate data, and structured tasks where precision matters.",
-    envs: "Finance, accounting, administration, banking, compliance.",
+      "Լավագույնս աշխատում է հստակ ընթացակարգերի, ճշգրիտ տվյալների և կառուցվածքային առաջադրանքների հետ, որտեղ ճշգրտությունը կարևոր է։",
+    envs: "Ֆինանսներ, հաշվապահություն, վարչարարություն, բանկային գործ, համապատասխանության վերահսկողություն։",
   },
 };
 
-// Clockwise order around Holland's hexagon. Used for code building and distance.
+// Հոլանդի վեցանկյունի շուրջ ժամսլաքի ուղղությամբ դասավորություն։ Օգտագործվում է կոդի կառուցման և հեռավորության հաշվարկի համար։
 export const HEX_ORDER = ["R", "I", "A", "S", "E", "C"];

@@ -1,31 +1,31 @@
-// Supplementary content drawn from the thesis, used across the info pages.
+// Լրացուցիչ բովանդակություն՝ վերցված ատենախոսությունից, օգտագործվում է տեղեկատվական էջերում։
 
 export const METHODOLOGIES = [
-  { method: "Holland RIASEC", basis: "Holland, 1959", kind: "6 types", accuracy: "High", complexity: "Medium", use: "\u2605 Primary", primary: true },
-  { method: "MBTI", basis: "Myers-Briggs", kind: "16 types", accuracy: "Debated", complexity: "High", use: "Supplementary" },
-  { method: "Big Five (OCEAN)", basis: "Costa & McCrae", kind: "5 factors", accuracy: "High", complexity: "High", use: "Supplementary" },
-  { method: "Strong Interest Inv.", basis: "Strong, 1927", kind: "RIASEC+", accuracy: "Very high", complexity: "High", use: "Costly" },
-  { method: "Self-Directed Search", basis: "Holland", kind: "RIASEC", accuracy: "High", complexity: "Low", use: "Alternative" },
+  { method: "Հոլանդի RIASEC", basis: "Holland, 1959", kind: "6 տիպ", accuracy: "Բարձր", complexity: "Միջին", use: "★ Հիմնական", primary: true },
+  { method: "MBTI", basis: "Myers-Briggs", kind: "16 տիպ", accuracy: "Վիճելի", complexity: "Բարձր", use: "Լրացուցիչ" },
+  { method: "Big Five (OCEAN)", basis: "Costa & McCrae", kind: "5 գործոն", accuracy: "Բարձր", complexity: "Բարձր", use: "Լրացուցիչ" },
+  { method: "Strong Interest Inv.", basis: "Strong, 1927", kind: "RIASEC+", accuracy: "Շատ բարձր", complexity: "Բարձր", use: "Ծախսատար" },
+  { method: "Self-Directed Search", basis: "Holland", kind: "RIASEC", accuracy: "Բարձր", complexity: "Ցածր", use: "Այլընտրանք" },
 ];
 
 export const ALGO_STAGES = [
-  { n: "1", title: "Data collection", body: "User responses are gathered as a raw score array \u2014 one value (0\u20134) for each of the 24 items.", out: "raw_scores[24]" },
-  { n: "2", title: "Scoring", body: "For each type t \u2208 {R,I,A,S,E,C}, the scores of all items belonging to that type are summed.", out: "score{R,I,A,S,E,C}" },
-  { n: "3", title: "Normalization", body: "Each type's total is scaled to a 0\u2013100 range: norm = score / max_score \u00D7 100.", out: "norm{R\u2026C} \u2208 [0,100]" },
-  { n: "4", title: "RIASEC code", body: "Types are sorted in descending order and the top three letters form the 3-letter Holland code (e.g. IRE).", out: "3-letter code" },
-  { n: "5", title: "Consistency", body: "The hexagon distance between the first two letters is measured (adjacent = 1, alternate = 2, opposite = 3).", out: "consistency_score" },
-  { n: "6", title: "O*NET matching", body: "Occupations whose codes best match the user's profile are retrieved and ranked by positional overlap.", out: "ranked occupations" },
+  { n: "1", title: "Տվյալների հավաքագրում", body: "Օգտատիրոջ պատասխանները հավաքվում են որպես հում միավորների զանգված՝ մեկ արժեք (0–4) 24 հարցերից յուրաքանչյուրի համար։", out: "raw_scores[24]" },
+  { n: "2", title: "Միավորների հաշվարկ", body: "Յուրաքանչյուր t ∈ {R,I,A,S,E,C} տիպի համար գումարվում են այդ տիպին պատկանող բոլոր հարցերի միավորները։", out: "score{R,I,A,S,E,C}" },
+  { n: "3", title: "Նորմալացում", body: "Յուրաքանչյուր տիպի գումարը մասշտաբավորվում է 0–100 միջակայքում՝ norm = score / max_score × 100։", out: "norm{R…C} ∈ [0,100]" },
+  { n: "4", title: "RIASEC կոդ", body: "Տիպերը դասավորվում են նվազման կարգով, և առաջին երեք տառերը կազմում են 3-տառանոց Հոլանդի կոդը (օր.՝ IRE)։", out: "3-տառանոց կոդ" },
+  { n: "5", title: "Հետևողականություն", body: "Չափվում է վեցանկյունի վրա առաջին երկու տառերի միջև եղած հեռավորությունը (հարակից = 1, միջանկյալ = 2, հակադիր = 3)։", out: "consistency_score" },
+  { n: "6", title: "O*NET համապատասխանեցում", body: "Առբերվում են այն մասնագիտությունները, որոնց կոդերը լավագույնս համընկնում են օգտատիրոջ պրոֆիլի հետ, և դասակարգվում ըստ դիրքային համընկնման։", out: "դասակարգված մասնագիտություններ" },
 ];
 
 export const ARCH_LAYERS = [
-  { tier: "Tier 1", name: "Presentation Layer", tech: "React.js / Vue.js, HTML5/CSS3, Mobile (Flutter)", resp: "User interface, test forms, results visualization", color: "#3aa6e0" },
-  { tier: "Tier 2", name: "Business Logic Layer", tech: "Node.js / Python (FastAPI), RIASEC algorithm, Scoring Engine", resp: "Calculations, test logic, recommendation generation", color: "#e8b04b" },
-  { tier: "Tier 3", name: "Data Layer", tech: "PostgreSQL, Redis (Cache), File Storage", resp: "Data storage, indexing, caching", color: "#42c08a" },
+  { tier: "Շերտ 1", name: "Ներկայացման շերտ", tech: "React.js / Vue.js, HTML5/CSS3, Mobile (Flutter)", resp: "Օգտատիրոջ ինտերֆեյս, թեստի ձևեր, արդյունքների վիզուալիզացիա", color: "#3aa6e0" },
+  { tier: "Շերտ 2", name: "Բիզնես-տրամաբանության շերտ", tech: "Node.js / Python (FastAPI), RIASEC ալգորիթմ, միավորների հաշվարկի շարժիչ", resp: "Հաշվարկներ, թեստի տրամաբանություն, առաջարկությունների գեներացում", color: "#e8b04b" },
+  { tier: "Շերտ 3", name: "Տվյալների շերտ", tech: "PostgreSQL, Redis (Cache), ֆայլերի պահոց", resp: "Տվյալների պահպանում, ինդեքսավորում, քեշավորում", color: "#42c08a" },
 ];
 
 export const PLATFORMS = [
-  { name: "MyNextMove.org", note: "U.S. O*NET-based free platform with an Interest Profiler that maps interests to matching occupations." },
-  { name: "Prospects.ac.uk", note: "UK career-planning platform whose Career Planner matches skills to 400+ job profiles and pathways." },
-  { name: "mlsa.am", note: "Armenian Ministry methodological platform \u2014 strategic guidance and career-orientation methodology." },
-  { name: "LinkedIn & Coursera", note: "Professional network and learning platforms that support skills growth and career exploration." },
+  { name: "MyNextMove.org", note: "ԱՄՆ-ի O*NET-ի վրա հիմնված անվճար հարթակ՝ Interest Profiler-ով, որը հետաքրքրությունները կապում է համապատասխան մասնագիտությունների հետ։" },
+  { name: "Prospects.ac.uk", note: "Մեծ Բրիտանիայի կարիերայի պլանավորման հարթակ, որի Career Planner-ը հմտությունները համապատասխանեցնում է 400+ աշխատանքային պրոֆիլների ու ուղիների հետ։" },
+  { name: "mlsa.am", note: "Հայաստանի նախարարության մեթոդական հարթակ՝ ռազմավարական ուղղորդում և կարիերայի կողմնորոշման մեթոդաբանություն։" },
+  { name: "LinkedIn & Coursera", note: "Մասնագիտական ցանց և ուսումնական հարթակներ, որոնք աջակցում են հմտությունների զարգացմանը և կարիերայի ուսումնասիրությանը։" },
 ];

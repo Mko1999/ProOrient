@@ -5,12 +5,12 @@ export default function Footer() {
     <footer style={S.foot} className="no-print">
       <div style={S.wrap}>
         <p>
-          Final project:{" "}
+          Ավարտական աշխատանք՝{" "}
           <b style={{ color: "#eef1f6" }}>
-            "Development of an Electronic System for Professional Orientation"
+            «Մասնագիտական կողմնորոշման էլեկտրոնային համակարգի մշակում»
           </b>
         </p>
-        <p style={{ marginTop: 6 }}>Software Engineering · Yerevan 2026</p>
+        <p style={{ marginTop: 6 }}>Ծրագրային ճարտարագիտություն · Երևան 2026</p>
       </div>
     </footer>
   );

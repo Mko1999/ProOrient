@@ -1,6 +1,6 @@
 # ProOrient — Professional Orientation System
 
-A web application for professional (career) orientation based on the **RIASEC / Holland** model. Built as a bachelor's final project: *"Development of an Electronic System for Professional Orientation."*
+A web application for professional (career) orientation based on the **RIASEC / Holland** model. Built as a bachelor's final project: _"Development of an Electronic System for Professional Orientation."_
 
 The app guides a user through a 24-question interest assessment, computes a three-letter RIASEC code, visualizes the result on Holland's hexagon, and recommends matching occupations. It is organized as a small multi-page site (Home, About RIASEC, The Types, Methodology, System) plus the test and results flow.
 
@@ -90,4 +90,4 @@ dependencies, so it is easy to read and could be unit-tested on its own.
 
 ## Scope note
 
-This is a **front-end prototype**: the RIASEC scoring algorithm runs entirely in the browser, and the occupation list is a curated sample. The full system described in the thesis (PostgreSQL database, FastAPI backend, JWT authentication, server-side PDF report generation, and the complete O*NET dataset of 900+ occupations) would extend this front end with a backend service.
+This is a **front-end prototype**: the RIASEC scoring algorithm runs entirely in the browser, and the occupation list is a curated sample. The full system described in the thesis (PostgreSQL database, FastAPI backend, JWT authentication, server-side PDF report generation, and the complete O\*NET dataset of 900+ occupations) would extend this front end with a backend service.

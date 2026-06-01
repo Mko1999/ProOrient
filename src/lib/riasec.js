@@ -22,7 +22,9 @@ export function computeNorm(answers) {
 // Stage 4: take the three highest types as the Holland code.
 export function buildCode(norm) {
   return HEX_ORDER.map((t) => ({ t, v: norm[t] }))
-    .sort((a, b) => b.v - a.v || HEX_ORDER.indexOf(a.t) - HEX_ORDER.indexOf(b.t))
+    .sort(
+      (a, b) => b.v - a.v || HEX_ORDER.indexOf(a.t) - HEX_ORDER.indexOf(b.t),
+    )
     .slice(0, 3)
     .map((o) => o.t)
     .join("");
@@ -37,9 +39,20 @@ export function hexDistance(a, b) {
 // Stage 5: consistency from the distance between the first two letters.
 export function consistency(code) {
   const d = hexDistance(code[0], code[1]);
-  if (d === 1) return { score: "High", detail: "Your top two types are adjacent — a very consistent profile." };
-  if (d === 2) return { score: "Medium", detail: "Your top two types are intermediate — moderately consistent." };
-  return { score: "Low", detail: "Your top two types are opposite — versatile but less consistent." };
+  if (d === 1)
+    return {
+      score: "Բարձր",
+      detail: "Ձեր առաջատար երկու տիպերը հարակից են՝ շատ հետևողական պրոֆիլ։",
+    };
+  if (d === 2)
+    return {
+      score: "Միջին",
+      detail: "Ձեր առաջատար երկու տիպերը միջանկյալ են՝ չափավոր հետևողական։",
+    };
+  return {
+    score: "Ցածր",
+    detail: "Ձեր առաջատար երկու տիպերը հակադիր են՝ բազմակողմանի, բայց պակաս հետևողական։",
+  };
 }
 
 // Stage 6: rank occupations by positional overlap with the user's code.

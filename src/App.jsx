@@ -23,14 +23,21 @@ export default function App() {
 
   const renderPage = () => {
     switch (route) {
-      case "about": return <About />;
-      case "types": return <Types />;
-      case "methodology": return <Methodology />;
-      case "architecture": return <Architecture />;
-      case "test": return <Test onComplete={onComplete} />;
-      case "results": return <Results answers={answers} />;
+      case "about":
+        return <About />;
+      case "types":
+        return <Types />;
+      case "methodology":
+        return <Methodology />;
+      case "architecture":
+        return <Architecture />;
+      case "test":
+        return <Test onComplete={onComplete} />;
+      case "results":
+        return <Results answers={answers} />;
       case "home":
-      default: return <Home />;
+      default:
+        return <Home />;
     }
   };
 

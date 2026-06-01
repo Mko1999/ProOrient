@@ -7,11 +7,12 @@ export default function Types() {
   return (
     <main style={S.wrap} className="fade">
       <div style={S.pageHead}>
-        <span style={S.eyebrow}>The model</span>
-        <h1 style={S.h1}>The six personality types</h1>
+        <span style={S.eyebrow}>Մոդելը</span>
+        <h1 style={S.h1}>Վեց անհատականության տիպերը</h1>
         <p style={S.lead}>
-          Each type describes a cluster of interests, strengths, and preferred work environments. Your
-          result combines the three that fit you best.
+          Յուրաքանչյուր տիպ նկարագրում է հետաքրքրությունների, ուժեղ կողմերի և
+          նախընտրելի աշխատանքային միջավայրերի մի խումբ։ Ձեր արդյունքը միավորում է
+          ձեզ լավագույնս համապատասխանող երեքը։
         </p>
       </div>
 
@@ -24,21 +25,27 @@ export default function Types() {
       </section>
 
       <section style={{ marginTop: 30 }}>
-        <h3 style={S.h3}>Typical work environments</h3>
+        <h3 style={S.h3}>Բնորոշ աշխատանքային միջավայրեր</h3>
         <div style={S.typeGrid}>
           {HEX_ORDER.map((t) => {
             const T = TYPES[t];
             return (
               <div key={t} className="tcard">
-                <h4 style={{ ...S.tcardH, color: T.color }}>{T.key} · {T.name}</h4>
+                <h4 style={{ ...S.tcardH, color: T.color }}>
+                  {T.key} · {T.name}
+                </h4>
                 <p style={S.tcardP}>{T.strengths}</p>
-                <p style={S.tcardFields}><b style={{ color: "#c2cad6" }}>Environments:</b> {T.envs}</p>
+                <p style={S.tcardFields}>
+                  <b style={{ color: "#c2cad6" }}>Միջավայրեր՝</b> {T.envs}
+                </p>
               </div>
             );
           })}
         </div>
         <div style={{ marginTop: 22 }}>
-          <button className="btn primary" onClick={() => navigate("test")}>Find your type →</button>
+          <button className="btn primary" onClick={() => navigate("test")}>
+            Գտեք ձեր տիպը →
+          </button>
         </div>
       </section>
     </main>

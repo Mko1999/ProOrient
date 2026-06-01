@@ -24,10 +24,12 @@ export default function Test({ onComplete }) {
   return (
     <main style={S.wrap} className="fade" key={current}>
       <div style={{ padding: "30px 0 8px" }}>
-        <span style={S.eyebrow}>Assessment</span>
+        <span style={S.eyebrow}>Թեստավորում</span>
         <div style={{ margin: "14px 0 28px" }}>
           <div style={styles.progMeta}>
-            <span>Question {current + 1} / {QUESTIONS.length}</span>
+            <span>
+              Հարց {current + 1} / {QUESTIONS.length}
+            </span>
             <span>{pct}%</span>
           </div>
           <div style={styles.progTrack}>
@@ -37,8 +39,10 @@ export default function Test({ onComplete }) {
       </div>
 
       <div style={styles.qCard}>
-        <div style={styles.qNum}>QUESTION {String(current + 1).padStart(2, "0")}</div>
-        <div style={styles.qText}>How much would you enjoy {q.q}?</div>
+        <div style={styles.qNum}>
+          ՀԱՐՑ {String(current + 1).padStart(2, "0")}
+        </div>
+        <div style={styles.qText}>Որքա՞ն կհավանեիք {q.q}։</div>
         <div style={styles.scale}>
           {SCALE.map((s) => (
             <button
@@ -59,25 +63,67 @@ export default function Test({ onComplete }) {
           style={{ visibility: current === 0 ? "hidden" : "visible" }}
           onClick={() => setCurrent(current - 1)}
         >
-          ← Previous
+          ← Նախորդը
         </button>
-        <button className="btn ghost" onClick={() => navigate("home")}>Cancel</button>
+        <button className="btn ghost" onClick={() => navigate("home")}>
+          Չեղարկել
+        </button>
       </div>
     </main>
   );
 }
 
 const styles = {
-  progMeta: { display: "flex", justifyContent: "space-between", fontSize: 13, color: C.muted, marginBottom: 8 },
-  progTrack: { height: 8, background: C.panel2, borderRadius: 99, overflow: "hidden" },
-  progFill: { height: "100%", borderRadius: 99, background: "linear-gradient(90deg,#e8b04b,#5b8def)", transition: "width .35s" },
-  qCard: {
-    background: C.panel, border: `1px solid ${C.line}`, borderRadius: 16,
-    padding: "clamp(22px,4vw,34px) clamp(18px,3vw,30px)", minHeight: 200,
+  progMeta: {
+    display: "flex",
+    justifyContent: "space-between",
+    fontSize: 13,
+    color: C.muted,
+    marginBottom: 8,
   },
-  qNum: { fontSize: 13, color: C.accent, fontWeight: 600, letterSpacing: ".5px", marginBottom: 14 },
-  qText: { fontFamily: "Georgia, serif", fontSize: "clamp(19px,3vw,27px)", fontWeight: 700, lineHeight: 1.3, marginBottom: 30 },
-  scale: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(110px,1fr))", gap: 10 },
+  progTrack: {
+    height: 8,
+    background: C.panel2,
+    borderRadius: 99,
+    overflow: "hidden",
+  },
+  progFill: {
+    height: "100%",
+    borderRadius: 99,
+    background: "linear-gradient(90deg,#e8b04b,#5b8def)",
+    transition: "width .35s",
+  },
+  qCard: {
+    background: C.panel,
+    border: `1px solid ${C.line}`,
+    borderRadius: 16,
+    padding: "clamp(22px,4vw,34px) clamp(18px,3vw,30px)",
+    minHeight: 200,
+  },
+  qNum: {
+    fontSize: 13,
+    color: C.accent,
+    fontWeight: 600,
+    letterSpacing: ".5px",
+    marginBottom: 14,
+  },
+  qText: {
+    fontFamily: "Georgia, serif",
+    fontSize: "clamp(19px,3vw,27px)",
+    fontWeight: 700,
+    lineHeight: 1.3,
+    marginBottom: 30,
+  },
+  scale: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit,minmax(110px,1fr))",
+    gap: 10,
+  },
   em: { display: "block", fontSize: 22, marginBottom: 6 },
-  navRow: { display: "flex", justifyContent: "space-between", marginTop: 24, gap: 12 },
+  navRow: {
+    display: "flex",
+    justifyContent: "space-between",
+    marginTop: 24,
+    gap: 12,
+  },
 };

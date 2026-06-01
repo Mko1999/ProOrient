@@ -5,23 +5,33 @@ export default function Methodology() {
   return (
     <main style={S.wrap} className="fade">
       <div style={S.pageHead}>
-        <span style={S.eyebrow}>Why RIASEC</span>
-        <h1 style={S.h1}>Methodology</h1>
+        <span style={S.eyebrow}>Ինչու՞ RIASEC</span>
+        <h1 style={S.h1}>Մեթոդաբանություն</h1>
         <p style={S.lead}>
-          The algorithm was chosen after reviewing leading psychometric methods and industry tools.
-          RIASEC was selected for its balance of accuracy, moderate complexity, and direct mapping to
-          occupational databases.
+          Ալգորիթմն ընտրվել է առաջատար հոգեմետրիկ մեթոդների և ոլորտի
+          գործիքների ուսումնասիրությունից հետո։ RIASEC-ն ընտրվել է ճշգրտության,
+          չափավոր բարդության և մասնագիտությունների տվյալների բազաների հետ ուղիղ
+          կապի հավասարակշռության շնորհիվ։
         </p>
       </div>
 
       <section style={S.section}>
-        <h3 style={S.h3}>Comparison of methods</h3>
+        <h3 style={S.h3}>Մեթոդների համեմատություն</h3>
         <div style={S.tableWrap}>
           <table style={S.table}>
             <thead>
               <tr>
-                {["Method", "Basis", "Type", "Accuracy", "Complexity", "Use"].map((h) => (
-                  <th key={h} style={S.th}>{h}</th>
+                {[
+                  "Մեթոդ",
+                  "Հիմք",
+                  "Տիպ",
+                  "Ճշգրտություն",
+                  "Բարդություն",
+                  "Կիրառում",
+                ].map((h) => (
+                  <th key={h} style={S.th}>
+                    {h}
+                  </th>
                 ))}
               </tr>
             </thead>
@@ -33,7 +43,13 @@ export default function Methodology() {
                   <td style={S.td}>{m.kind}</td>
                   <td style={S.td}>{m.accuracy}</td>
                   <td style={S.td}>{m.complexity}</td>
-                  <td style={{ ...S.td, color: m.primary ? "#e8b04b" : "#9aa3b2", fontWeight: m.primary ? 700 : 400 }}>
+                  <td
+                    style={{
+                      ...S.td,
+                      color: m.primary ? "#e8b04b" : "#9aa3b2",
+                      fontWeight: m.primary ? 700 : 400,
+                    }}
+                  >
                     {m.use}
                   </td>
                 </tr>
@@ -44,11 +60,18 @@ export default function Methodology() {
       </section>
 
       <section style={{ marginTop: 36 }}>
-        <h3 style={S.h3}>The scoring algorithm</h3>
-        <p style={S.body}>Each completed test is processed through six stages, from raw responses to ranked matches.</p>
+        <h3 style={S.h3}>Միավորների հաշվարկի ալգորիթմը</h3>
+        <p style={S.body}>
+          Յուրաքանչյուր ավարտված թեստ մշակվում է վեց փուլով՝ հում
+          պատասխաններից մինչև դասակարգված համապատասխանություններ։
+        </p>
         <div style={S.stageGrid}>
           {ALGO_STAGES.map((st) => (
-            <div key={st.n} className="tcard" style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+            <div
+              key={st.n}
+              className="tcard"
+              style={{ display: "flex", gap: 14, alignItems: "flex-start" }}
+            >
               <div style={S.stageNum}>{st.n}</div>
               <div>
                 <h4 style={S.tcardH}>{st.title}</h4>
@@ -61,7 +84,7 @@ export default function Methodology() {
       </section>
 
       <section style={{ marginTop: 36 }}>
-        <h3 style={S.h3}>Existing platforms analyzed</h3>
+        <h3 style={S.h3}>Վերլուծված գործող հարթակներ</h3>
         <div style={S.typeGrid}>
           {PLATFORMS.map((p) => (
             <div key={p.name} className="tcard">

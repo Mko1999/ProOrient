@@ -7,22 +7,22 @@ export default function Home() {
   return (
     <main style={S.wrap} className="fade">
       <div style={S.pageHead}>
-        <span style={S.eyebrow}>Final Project · 2026</span>
+        <span style={S.eyebrow}>Ավարտական աշխատանք · 2026</span>
         <h1 style={S.h1}>
-          Discover your <span style={S.grad}>professional path</span> scientifically
+          Բացահայտեք ձեր <span style={S.grad}>մասնագիտական ուղին</span> գիտականորեն
         </h1>
         <p style={S.lead}>
-          This system is based on John Holland's RIASEC model — one of the most established theories
-          in career psychology. Answer 24 quick questions and get your personality code with matching
-          career recommendations.
+          Այս համակարգը հիմնված է Ջոն Հոլանդի RIASEC մոդելի վրա՝ կարիերայի հոգեբանության
+          ամենահաստատված տեսություններից մեկը։ Պատասխանեք 24 արագ հարցի և ստացեք ձեր
+          անհատականության կոդը՝ համապատասխան մասնագիտական առաջարկություններով։
         </p>
         <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-          <button className="btn primary" onClick={() => navigate("test")}>Start the test →</button>
-          <button className="btn ghost" onClick={() => navigate("about")}>What is RIASEC?</button>
+          <button className="btn primary" onClick={() => navigate("test")}>Սկսել թեստը →</button>
+          <button className="btn ghost" onClick={() => navigate("about")}>Ի՞նչ է RIASEC-ը</button>
         </div>
 
         <div style={S.metaStrip}>
-          {[["24", "questions · 6 types × 4"], ["6", "personality types"], ["900+", "occupations (O*NET)"]].map(
+          {[["24", "հարց · 6 տիպ × 4"], ["6", "անհատականության տիպ"], ["900+", "մասնագիտություն (O*NET)"]].map(
             ([b, s], i) => (
               <div key={i} style={S.metaCell}>
                 <b style={S.metaB}>{b}</b>
@@ -34,23 +34,23 @@ export default function Home() {
       </div>
 
       <section style={{ marginTop: 56 }}>
-        <h3 style={S.h3}>The six personality types</h3>
+        <h3 style={S.h3}>Վեց անհատականության տիպերը</h3>
         <div style={S.typeGrid}>
           {HEX_ORDER.map((t) => (
             <TypeCard key={t} type={TYPES[t]} />
           ))}
         </div>
         <div style={{ marginTop: 18 }}>
-          <button className="btn ghost" onClick={() => navigate("types")}>See full type details →</button>
+          <button className="btn ghost" onClick={() => navigate("types")}>Տեսնել տիպերի մանրամասները →</button>
         </div>
       </section>
 
       <section style={S.closeCta}>
-        <h3 style={{ ...S.h3, marginBottom: 10 }}>Ready to find your code?</h3>
+        <h3 style={{ ...S.h3, marginBottom: 10 }}>Պատրա՞ստ եք գտնել ձեր կոդը։</h3>
         <p style={{ ...S.body, marginBottom: 22, marginLeft: "auto", marginRight: "auto" }}>
-          The assessment takes about 3 minutes.
+          Թեստը տևում է մոտ 3 րոպե։
         </p>
-        <button className="btn primary" onClick={() => navigate("test")}>Start the test →</button>
+        <button className="btn primary" onClick={() => navigate("test")}>Սկսել թեստը →</button>
       </section>
     </main>
   );

@@ -1,52 +1,52 @@
-// 24-item interest inventory: 4 questions per RIASEC type.
-// Each item: { t: type letter, q: lowercase verb phrase completing
-// "How much would you enjoy ___ ?" }
+// 24 հարցից բաղկացած հետաքրքրությունների հարցաշար՝ RIASEC-ի յուրաքանչյուր տիպի համար 4 հարց։
+// Յուրաքանչյուր տարր՝ { t: տիպի տառ, q: զբաղմունքի արտահայտություն, որը լրացնում է
+// «Որքա՞ն կհավանեիք ___» հարցը }
 
 export const QUESTIONS = [
-  // R — Realistic
-  { t: "R", q: "repairing machines or electronic devices" },
-  { t: "R", q: "working with tools, equipment, or machinery" },
-  { t: "R", q: "building or assembling things with your own hands" },
-  { t: "R", q: "setting up or configuring computer hardware" },
+  // R — Իրատեսական
+  { t: "R", q: "մեքենաներ կամ էլեկտրոնային սարքեր նորոգելը" },
+  { t: "R", q: "գործիքների, սարքավորումների կամ մեխանիզմների հետ աշխատելը" },
+  { t: "R", q: "սեփական ձեռքերով իրեր կառուցելը կամ հավաքելը" },
+  { t: "R", q: "համակարգչային սարքավորում տեղադրելը կամ կարգավորելը" },
 
-  // I — Investigative
-  { t: "I", q: "investigating scientific problems and running experiments" },
-  { t: "I", q: "analyzing data to find patterns" },
-  { t: "I", q: "solving complex math or logic problems" },
-  { t: "I", q: "developing a new algorithm or software solution" },
+  // I — Հետազոտական
+  { t: "I", q: "գիտական խնդիրներ ուսումնասիրելը և փորձեր կատարելը" },
+  { t: "I", q: "տվյալներ վերլուծելը՝ օրինաչափություններ գտնելու համար" },
+  { t: "I", q: "բարդ մաթեմատիկական կամ տրամաբանական խնդիրներ լուծելը" },
+  { t: "I", q: "նոր ալգորիթմ կամ ծրագրային լուծում մշակելը" },
 
-  // A — Artistic
-  { t: "A", q: "drawing, designing, or creating visual art" },
-  { t: "A", q: "writing a story, poem, or screenplay" },
-  { t: "A", q: "designing an interface or product" },
-  { t: "A", q: "expressing ideas in original ways" },
+  // A — Արվեստագիտական
+  { t: "A", q: "նկարելը, ձևավորելը կամ տեսողական արվեստ ստեղծելը" },
+  { t: "A", q: "պատմվածք, բանաստեղծություն կամ սցենար գրելը" },
+  { t: "A", q: "ինտերֆեյս կամ արտադրանք նախագծելը" },
+  { t: "A", q: "գաղափարներ ինքնատիպ ձևերով արտահայտելը" },
 
-  // S — Social
-  { t: "S", q: "helping people solve their problems" },
-  { t: "S", q: "teaching or explaining things to others" },
-  { t: "S", q: "working in a team toward a shared goal" },
-  { t: "S", q: "listening to people and understanding their feelings" },
+  // S — Սոցիալական
+  { t: "S", q: "մարդկանց օգնելը՝ լուծելու իրենց խնդիրները" },
+  { t: "S", q: "ուրիշներին սովորեցնելը կամ բացատրելը" },
+  { t: "S", q: "թիմում աշխատելը՝ ընդհանուր նպատակի համար" },
+  { t: "S", q: "մարդկանց լսելը և նրանց զգացմունքները հասկանալը" },
 
-  // E — Enterprising
-  { t: "E", q: "leading a team or project" },
-  { t: "E", q: "persuading people to accept your point of view" },
-  { t: "E", q: "starting and growing your own business" },
-  { t: "E", q: "presenting an idea to a large audience" },
+  // E — Ձեռնարկատիրական
+  { t: "E", q: "թիմ կամ նախագիծ ղեկավարելը" },
+  { t: "E", q: "մարդկանց համոզելը՝ ընդունելու ձեր տեսակետը" },
+  { t: "E", q: "սեփական բիզնես սկսելը և զարգացնելը" },
+  { t: "E", q: "գաղափար ներկայացնելը մեծ լսարանի առջև" },
 
-  // C — Conventional
-  { t: "C", q: "organizing data, documents, or files" },
-  { t: "C", q: "working with numbers, reports, or budgets" },
-  { t: "C", q: "following clear procedures and rules" },
-  { t: "C", q: "checking data for accuracy and errors" },
+  // C — Կանոնակարգային
+  { t: "C", q: "տվյալներ, փաստաթղթեր կամ ֆայլեր կազմակերպելը" },
+  { t: "C", q: "թվերի, հաշվետվությունների կամ բյուջեների հետ աշխատելը" },
+  { t: "C", q: "հստակ ընթացակարգերին ու կանոններին հետևելը" },
+  { t: "C", q: "տվյալները ճշտության և սխալների համար ստուգելը" },
 ];
 
-// 5-point Likert scale (0..4).
+// 5 աստիճանի Լիկերտի սանդղակ (0..4)։
 export const SCALE = [
-  { v: 0, em: "\uD83D\uDE16", label: "Not at all" },
-  { v: 1, em: "\uD83D\uDE41", label: "A little" },
-  { v: 2, em: "\uD83D\uDE10", label: "Neutral" },
-  { v: 3, em: "\uD83D\uDE42", label: "A lot" },
-  { v: 4, em: "\uD83D\uDE0D", label: "Definitely" },
+  { v: 0, em: "😖", label: "Ընդհանրապես ոչ" },
+  { v: 1, em: "🙁", label: "Մի փոքր" },
+  { v: 2, em: "😐", label: "Չեզոք" },
+  { v: 3, em: "🙂", label: "Շատ" },
+  { v: 4, em: "😍", label: "Անպայման" },
 ];
 
 export const MAX_PER_Q = 4;
